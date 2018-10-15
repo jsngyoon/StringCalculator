@@ -10,6 +10,8 @@ public class StringCalculator {
 	public StringCalculator() {}
 	
 	public int add(String input) {
+		if (input == null || input.isEmpty()) return 0;
+		
 		String[] tokens;
 		Matcher m = Pattern.compile("//(.)\n(.*)").matcher(input);
 		if (m.find()) {
